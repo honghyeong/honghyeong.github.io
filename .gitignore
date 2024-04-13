@@ -6,3 +6,5 @@ Gemfile.lock
 
 .DS_Store
 .embold
+
+.backup
