@@ -87,7 +87,7 @@ IT 인프라를 구성하는 장비들은 하드웨어이므로 장비 노후화
 
 아키텍처를 이루는 서버들은, 우리가 집에서 사용하는 PC처럼 전원을 연결하고, 네트워크를 연결해야합니다. 기업에서 IT 인프라를 구축하는데 사용하는 물리서버들은 데이터센터라는 공간에 모여있고 랙(Rack)이라는 선반에 올라가게 됩니다. 서버가 입고되는 데이터센터는 여러 서버들을 관리할 수 있는 환경(전력, 공간, 냉각시설 등)을 갖추고있어 많은 서버들을 운영할 수 있는 최적의 환경이라고 할 수 있습니다. 데이터센터의 수많은 랙(Rack)은 하드웨어를 고정시킬 수 있는 선반이 있고, 서버, 네트워크 장비, 스토리지들을 선반에 고정시킬 수 있습니다. 뿐만아니라, 랙에는 전원을 공급하는 전원 콘센트가 이중화 돼있어, 하나의 전원 공급 장치(UPS)에 고장이 생겨도 서비스에 영향이 가지않도록 설계합니다.
 
-![rack](../img/easy-it-infra/rack.png)
+![rack](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/rack.png)
 
 단순히 랙에 빈 공간이 있다고해서 서버를 아무렇게나 꽂을 수는 없습니다. 서버가 들어갈 수 있는 충분한 공간(유닛)이 있는지, 랙에서 공급할 수 있는 전력은 충분한지, 연결되어야하는 네트워크 장비(스위치)와 케이블로 연결할 수 있는 거리인지. 충분히 다양한 점을 고려해야합니다.
 
@@ -104,13 +104,13 @@ IT 인프라를 구성하는 장비들은 하드웨어이므로 장비 노후화
 
 그럼 이제 데이터 센터안에 있는 서버를 뜯어봅시다.
 
-![real-server](../img/easy-it-infra/real-server.png)
+![real-server](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/real-server.png)
 
-![simple-serveer](../img/easy-it-infra/real-server.png)
+![simple-serveer](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/simple-server.png)
 
 서버는 위의 그림처럼 여러 컴포넌트들이 버스로 연결되어있는 구조입니다. 기본적으로 집에서 사용하는 PC와 물리적인 기본 구성은 비슷하지만, **“하나의 컴포넌트가 고장나도 문제없도록 이중화 돼있다는 점”**과 “**컴포넌트들이 PC에 비해서 훨씬 고스펙”**이라는 측면에서 조금의 차이가 있을 뿐입니다. 서버는 일반적으로 위와 같은 하드웨어 구조를 가지고, 입출력장치(키보드, 모니터, 마우스 등) 또는 프로세스가 OS를 통해 명령을 내리면 CPU가 중앙에서 명령어를 처리하여 다른 컴포넌트를 동작시키며 다양한 업무(프린터 출력, 모니터 출력, 애플리케이션 실행 등)를 수행하게 됩니다.
 
-![server-operation-process](../img/easy-it-infra/serveer-operation-process)
+![server-operation-process](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/server-operation-process)
 
 <details>
 <summary>검색해볼만한 키워드</summary>
@@ -141,7 +141,7 @@ CPU(Central Processing Unit, 중앙 처리 장치)는 1초에 1억번 이상의 
 
 자, 그럼 실제로 제가 업무를 하면서 입고되는 서버의 CPU를 예로 들어 보겠습니다. 인텔이라는 CPU 제조사의 “[제온 Silver 4314 프로세서](https://www.intel.co.kr/content/www/kr/ko/products/sku/215269/intel-xeon-silver-4314-processor-24m-cache-2-40-ghz/specifications.html)”입니다. 아래 사진과 같이 CPU의 사양(스펙)은 대표적으로 **코어 수, 클럭 수**로 설명됩니다. ( 하지만 이외에도 CPU 아키텍처, 캐시 크기, 하이퍼 스레딩 등 CPU의 연산 속도에 영향을 미치는 요소는 많습니다. )
 
-![cpu-spec](../img/easy-it-infra/cpu-spec.png)
+![cpu-spec](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/cpu-spec.png)
 
 - 코어 = 연산을 수행할 수 있는 최소 단위
 - 주파수 = CPU가 1초에 몇 번의 작업(클럭사이클)을 수행하는지
@@ -164,7 +164,7 @@ CPU(Central Processing Unit, 중앙 처리 장치)는 1초에 1억번 이상의 
 - 저장공간 크기 = 레지스터 < L1 캐시 < L2 캐시 < L3 캐시 < 메모리 < 비휘발성 기억장치
 - 데이터 접근 속도 = 레지스터 > L1 캐시 > L2 캐시 > L3 캐시 > 메모리(µs) > 비휘발성 기억장치(ms)
 
-![memory-hierarchy](../img/easy-it-infra/memory-hierarchy.png)
+![memory-hierarchy](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/memory-hierarchy.png)
 
 위의 이미지 처럼 메모리는 CPU와 채널(Channel)이라는 데이터 경로로 직접 연결되어 있습니다. L1, L2, L3 캐시와 다르게 메모리에 접근하기 위해서는 메모리 컨트롤러를 통해서 접근해야하므로 상대적으로 더 많은 레이턴시가 발생합니다.
 
@@ -200,7 +200,7 @@ CPU(Central Processing Unit, 중앙 처리 장치)는 1초에 1억번 이상의 
 
 거대한 저장용량 뿐만아니라, 자체적으로 CPU와 캐시 메모리를 갖고있어서 빠른 속도로 데이터를 쓰거나 읽을 수 있습니다. 서버는 스토리지의 디스크와 직접 데이터를 교환하지않고, 캐시를 통해서 데이터를 교환하여 빠르게 읽기/쓰기가 가능합니다.
 
-![storage-cash](../img/easy-it-infra/storage-cash.png)
+![storage-cash](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/storage-cash.png)
 
 일반적으로 사용하는 스토리지의 종류는 크게 3가지(Block, File, Object)가 있고, 각각 저장 방식에 차이가 있으며 스토리지가 서버와 연결하는데 필요한 하드웨어 구성도 다릅니다. SAN 스토리지를 연결하기 위해서는 SAN 스위치, HBA 카드, FC 케이블이 필요한 반면에, NAS 스토리지는 NIC카드와 이더넷 케이블만 있으면 손쉽게 구성하여 사용할 수 있습니다.
 
@@ -227,7 +227,7 @@ CPU(Central Processing Unit, 중앙 처리 장치)는 1초에 1억번 이상의 
 - CPU ↔ 입출력장치 데이터 전송 목적 = PCI 회선
 - CPU ↔ 처리 속도가 늦어도 되는 저속 입출력(네트워크, USB, …) 목적 = PCH 칩셋(I/O컨트롤러) + DMI
 
-![server-bus](../img/easy-it-infra/server-bus.png)
+![server-bus](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/server-bus.png)
 
 <details>
 <summary>검색해볼만한 키워드</summary>
@@ -255,7 +255,7 @@ CPU에 대해서 소개할때, 프로세스/입출력장치의 명령에 따라�
 - 버스
 - 네트워크 인터페이스
 
-![server-summary](../img/easy-it-infra/server-summary.png)
+![server-summary](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/server-summary.png)
 
 <br>
 <br>
@@ -271,7 +271,7 @@ IT 인프라 아키텍처에는 어떤 것이 있고, 그 아키텍처를 이루
 
 아래의 그림은 3계층 구조가 어떻게 구성돼있는지 정말 간단하게 보여주고 있습니다.
 
-![3-layer-arch](../img/easy-it-infra/3-layer-arch.png)
+![3-layer-arch](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/3-layer-arch.png)
 
 각 서버의 역할(WEB, WAS, DB)에 따라 운영체제 위에서 각자의 역할에 특화된 프로세스가 돌아가며 서버의 자원(CPU, 메모리, 입출력장치)을 활용하고, 각 서버들은 네트워크를 통해 연결되어 요청과 응답을 주고받으며 사용자들에게 IT 서비스를 제공하게 됩니다.
 
@@ -285,7 +285,7 @@ IT 인프라 아키텍처에는 어떤 것이 있고, 그 아키텍처를 이루
 우리는 평소에 PC를 켜고 바탕화면에 설치돼있는 파워포인트, LOL 등 다양한 프로그램을 클릭하여 실행하고, 쉽고 간편하게 사용합니다. 사실 이러한 프로그램들은 서버가 전원이 꺼져도 데이터가 보존되어야하므로, 평소에는 보조기억장치(HDD, SSD)에서 **“프로그램”**으로 죽어있다가, 클릭하여 실행하는 순간 프로그램이 메모리에 올라가면서 **“프로세스”**로 살아나게 됩니다. 살아난 프로세스는 CPU를 점유하면서, 프로그램에 적혀있던 명령어와 데이터를 처리하며 동작하게 됩니다.
 이러한 일련의 과정을 OS(운영체제)가 총괄하게 되는데, 특히 **커널**이 핵심 역할을 담당하게 됩니다.
 
-![program-to-process](../img/easy-it-infra/program-to-process.png)
+![program-to-process](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/program-to-process.png)
 
 프로세스는 CPU에서 동작하기 위해서 깨어난 프로그램이라고 했습니다. 프로세스는 **“스레드(작업의 최소단위)”**로 한번 더 나눌 수 있습니다. 하나의 프로세스는 여러 스레드로 나누지 않았을 때, 하나의 스레드가 동작하고 있다고 볼 수 있습니다.
 
@@ -296,7 +296,7 @@ IT 인프라 아키텍처에는 어떤 것이 있고, 그 아키텍처를 이루
 - 신규 생성시 부하 : 프로세스 > 스레드
 - 프로그래밍 복잡성 : 프로세스 < 스레드
 
-![process-thread](../img/easy-it-infra/process-thread.png)
+![process-thread](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/process-thread.png)
 
 프로그램을 작성할 때 프로세스를 사용할지, 스레드를 사용할지는 각각의 특성과 장단점을 충분히 이해한 후 결정해야합니다.
 
@@ -383,7 +383,7 @@ IT 인프라 아키텍처에는 어떤 것이 있고, 그 아키텍처를 이루
 
 그러면 이제부터 **“각 서버가 서로 어떻게 데이터를 주고받고, 어떻게 IT 서비스를 제공하는지”** 알아보겠습니다. (웹 서버, AP 서버, DB 서버에서 동작하는 순서를 볼 때, 어디서 시스템 콜이 동작하고, 커널이 작동할지 생각하면서 알아보면 더 좋을 것 같습니다.)
 
-![3-layer-data-flow](../img/easy-it-infra/3-layer-data-flow.png)
+![3-layer-data-flow](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/3-layer-data-flow.png)
 
 구글 크롬을 통해서 유튜브에 접속하는 경우를 예를 들어 설명해보겠습니다.
 
@@ -399,7 +399,7 @@ IT 인프라 아키텍처에는 어떤 것이 있고, 그 아키텍처를 이루
    1. 정적콘텐츠 = 낮은 빈도로 변경되는 데이터(로고 이미지, … ) = 웹서버에서 저장된 데이터를 이용해서 자체적으로 처리
    2. 동적콘텐츠 = 높은 빈도로 변경되는 데이터(조회수 정보, 댓글 정보, … ) = AP서버에서 실시간으로 만들어 줘야하므로 AP서버로 요청을 보내고 동적 컨텐츠를 기다린다.
 
-![client-to-web](../img/easy-it-infra/client-to-web.png)
+![client-to-web](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/client-to-web.png)
 
 <details>
 <summary>검색해볼만한 키워드</summary>
@@ -422,7 +422,7 @@ IT 인프라 아키텍처에는 어떤 것이 있고, 그 아키텍처를 이루
 4. DB서버의 데이터가 필요하면, DB서버로 요청을 보낸다.
 5. DB서버의 데이터를 응답으로 받고, 데이터를 처리해서 동적인 콘텐츠를 생성하고, 웹서버로 응답을 보낸다.
 
-![web-to-ap](../img/easy-it-infra/web-to-ap.png)
+![web-to-ap](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/web-to-ap.png)
 
 <details>
 <summary>검색해볼만한 키워드</summary>
@@ -448,7 +448,7 @@ AP서버는 DB서버에 SQL쿼리문으로 필요한 데이터를 요청하게 �
 4. 한번 액세스한 데이터는 메모리에 캐시 형태로 저장하고, 이후 액세스할때 재사용한다.
 5. 요청을 보낸 AP서버로 SQL 요청에 대한 응답(데이터)을 반환한다.
 
-![ap-db-ap](../img/easy-it-infra/ap-db-ap.png)
+![ap-db-ap](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/ap-db-ap.png)
 
 DB서버의 구체적인 동작은 데이터베이스 종류에 따라 다르고, RDBMS 인지, NoSQL인지, In-memory DB인지에 따라 또 동작방식이 다르니, 참고차 찾아보시면 좋을 것 같습니다.
 
@@ -470,7 +470,7 @@ AP서버는 동적 컨텐츠 생성에 필요한 데이터를 DB서버로부터 
 2. AP서버의 스레드가 데이터를 가지고 동적 콘텐츠를 생성한다.
 3. 동적 콘텐츠를 웹서버에게 반환한다.
 
-![ap-to-web](../img/easy-it-infra/ap-to-web.png)
+![ap-to-web](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/ap-to-web.png)
 
 <br>
 <br>
@@ -483,7 +483,7 @@ AP서버는 동적 컨텐츠 생성에 필요한 데이터를 DB서버로부터 
 2. 웹서버 프로세스는 동적콘텐츠를 클라이언트(웹 브라우저)에게 반환한다.
 3. 콘텐츠(정적+동적)가 웹 브라우저(구글 크롬)에 표시된다.
 
-![web-to-client](../img/easy-it-infra/web-to-client.png)
+![web-to-client](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/web-to-client.png)
 
 정리하자면, 3계층 시스템은 다음과 같이 동작합니다.
 
