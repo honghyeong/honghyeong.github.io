@@ -110,7 +110,7 @@ IT 인프라를 구성하는 장비들은 하드웨어이므로 장비 노후화
 
 서버는 위의 그림처럼 여러 컴포넌트들이 버스로 연결되어있는 구조입니다. 기본적으로 집에서 사용하는 PC와 물리적인 기본 구성은 비슷하지만, **“하나의 컴포넌트가 고장나도 문제없도록 이중화 돼있다는 점”**과 “**컴포넌트들이 PC에 비해서 훨씬 고스펙”**이라는 측면에서 조금의 차이가 있을 뿐입니다. 서버는 일반적으로 위와 같은 하드웨어 구조를 가지고, 입출력장치(키보드, 모니터, 마우스 등) 또는 프로세스가 OS를 통해 명령을 내리면 CPU가 중앙에서 명령어를 처리하여 다른 컴포넌트를 동작시키며 다양한 업무(프린터 출력, 모니터 출력, 애플리케이션 실행 등)를 수행하게 됩니다.
 
-![server-operation-process](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/server-operation-process)
+![server-operation-process](https://honghyeong-github-page.s3.ap-northeast-2.amazonaws.com/easy-it-infra/1/server-operation-process.png)
 
 <details>
 <summary>검색해볼만한 키워드</summary>
