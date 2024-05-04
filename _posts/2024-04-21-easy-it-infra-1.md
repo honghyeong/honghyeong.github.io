@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 초등학생도 이해하는 IT 인프라 구조 1 - IT 인프라의 기본 구조
+title: 초등학생도 이해하는 IT 인프라 1 - IT 인프라의 기본 구조
 subtitle: IT 인프라 기본구조, 데이터센터와 서버, 3계층형 시스템
 author: honghyeong
 categories: system
@@ -509,7 +509,7 @@ AP서버는 동적 컨텐츠 생성에 필요한 데이터를 DB서버로부터 
 <br>
 <br>
 
-## 5. Reference
+## Reference
 
 - **Book**
   - 그림으로 공부하는 IT 인프라 구조

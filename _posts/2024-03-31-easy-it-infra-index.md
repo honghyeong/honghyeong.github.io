@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 초등학생도 이해하는 IT 인프라 구조
+title: 초등학생도 이해하는 IT 인프라 구조 - index
 subtitle: 인프라 엔지니어
 author: honghyeong
 categories: system
